@@ -1,5 +1,4 @@
 import os
-import pickle
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
 from flask_cors import CORS
