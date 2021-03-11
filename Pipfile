@@ -10,14 +10,6 @@ flask-restplus = "*"
 python-dotenv = "*"
 flask = "*"
 
-gurobipy = "==9.1.1"
-
-matplotlib = "==3.1.0"
-numpy = "==1.16.4"
-pandas = "==0.24.2"
-
-subprocess.run = "==0.0.8"
-
 unicodecsv = "==0.14.1"
 Unidecode = "==1.2.0"
 urllib3 = "==1.25.3"
