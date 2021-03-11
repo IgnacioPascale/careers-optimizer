@@ -1,0 +1,36 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+astunparse = "==1.6.3"
+gunicorn = "==19.9.0"
+html5lib = "==1.0.1"
+httplib2 = "==0.17.3"
+json-merge-patch = "==0.2"
+json5 = "==0.9.5"
+jsonfield = "==3.1.0"
+jsonschema = "==3.2.0"
+matplotlib = "==3.1.0"
+numpy = "==1.16.4"
+pandas = "==0.24.2"
+parso = "==0.5.1"
+pipenv = "==2020.11.15"
+regex = "==2020.11.13"
+requests = "==2.22.0"
+"subprocess.run" = "==0.0.8"
+text-unidecode = "==1.2"
+unicodecsv = "==0.14.1"
+Flask = "==1.1.1"
+Flask-Admin = "==1.5.3"
+Flask-AppBuilder = "==1.12.3"
+Flask-Cors = "==3.0.10"
+Flask-RESTful = "==0.3.8"
+Pillow = "==8.0.1"
+Unidecode = "==1.2.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"

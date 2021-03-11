@@ -3,10 +3,10 @@ module.exports = {
     'vuetify'
   ], 
   outputDir: 'dist',
-  devServer: {
+  //devServer: {
 
-    target: 'http://localhost:5000/'
+    //target: 'http://localhost:5000/'
 
 
-  }
+  //}
 }
