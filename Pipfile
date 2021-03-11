@@ -1,24 +1,11 @@
-
 [[source]]
-url = "https://pypi.python.org/simple"
+url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
 [packages]
-gunicorn = "==19.7.1"
-flask-restplus = "*"
-python-dotenv = "*"
-flask = "*"
-
-unicodecsv = "==0.14.1"
-Unidecode = "==1.2.0"
-urllib3 = "==1.25.3"
 
 [dev-packages]
-pytest = "*"
-bumpversion = "*"
-pytest-sugar = "*"
-pytest-cov = "*"
 
 [requires]
-python_version = "3.7.2"
+python_version = "3.7"
