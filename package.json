@@ -7,7 +7,6 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "preinstall": "cd src",
-    "postinstall": "npm run build",
     "start": "main.js"
   },
   "dependencies": {
