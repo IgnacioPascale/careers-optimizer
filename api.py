@@ -136,7 +136,6 @@ class Formation(Resource):
     def post(self):
         args = parser.parse_args()
 
-
         console = subprocess.check_output("python3 main.py formation --team={0} --defs={1} --mid={2} --att={3}".format(
             args["team"],
             args["defs"],
