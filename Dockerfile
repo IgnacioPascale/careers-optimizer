@@ -14,5 +14,4 @@ CMD [ "/bin/bash" ]
 # RUN pip install flask
 
 COPY . /api
-RUN make /api
 CMD python /api/api.py
