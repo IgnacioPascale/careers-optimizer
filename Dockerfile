@@ -12,6 +12,8 @@ RUN conda install -y pandas numpy matplotlib
 RUN pip install Pillow
 RUN pip install unidecode
 RUN pip install flask
+RUN pip install flask_restful
+RUN pip install flask_cors
 
 COPY . /api
 WORKDIR /api
