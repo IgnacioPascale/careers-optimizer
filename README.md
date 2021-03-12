@@ -23,6 +23,8 @@ The front end is developed on `vue.js` and `css`. It's in the folder `app_vue`. 
 
 We can find the API and back end in the folder `api`. However, in order for the front-end  to work, the API will have to run locally. We previously tried deploying the API to heroku using dockerfile. The problem is that in order to use GUROBI optimization one would need a license in their local computer. Since this is an academic project, we are working on it using a free student academic license. Unfortunately, this license **cannot** be used in a different computer, hence making deployment of the API Flask and back end more difficult.
 
+![](https://i.ibb.co/pQcvBsp/Screenshot-2021-03-12-at-16-33-32.png)
+
 # Setting up virtual environment
 
 You may need to set up a virtual environment if you don't have the correct dependencies. These dependencies are specified in `environment.yml` and `requirements.txt` in the `api` folder. The steps are as follows:
