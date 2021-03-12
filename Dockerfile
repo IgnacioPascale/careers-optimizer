@@ -2,16 +2,9 @@ FROM continuumio/miniconda3
 
 # For Slackbot Dockerfile
 
-echo %CD%
-
-ENV APP_HOME /app
-
-echo %CD%
 
 ENTRYPOINT []
 CMD [ "/bin/bash" ]
-
-echo %CD%
 
 # RUN conda config --add channels http://conda.anaconda.org/gurobi
 # RUN conda install gurobi
@@ -20,5 +13,6 @@ echo %CD%
 # RUN pip install unidecode
 # RUN pip install flask
 
-
-CMD python api.py
+COPY ./api
+RUN make /api
+CMD python /api/api.py
