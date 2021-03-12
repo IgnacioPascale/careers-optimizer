@@ -41,7 +41,7 @@ class Overall(Resource):
     def post(self):
         args = parser.parse_args()
 
-        ret =  subprocess.check_output("python3 main.py overall --budget {0} --budget_wage {1}  --gk {2} --defs {3} --mid {4} --att {5} --max_age {6}".format(
+        ret =  subprocess.check_output("python main.py overall --budget {0} --budget_wage {1}  --gk {2} --defs {3} --mid {4} --att {5} --max_age {6}".format(
             args["budget"],
             args["budget_wage"],
             args["gk"],
@@ -78,7 +78,7 @@ class Potential(Resource):
     def post(self):
         args = parser.parse_args()
 
-        ret =  subprocess.check_output("python3 main.py potential --budget {0} --budget_wage {1}  --gk {2} --defs {3} --mid {4} --att {5} --max_age {6} --max_overall {7}".format(
+        ret =  subprocess.check_output("python main.py potential --budget {0} --budget_wage {1}  --gk {2} --defs {3} --mid {4} --att {5} --max_age {6} --max_overall {7}".format(
             args["budget"],
             args["budget_wage"],
             args["gk"],
@@ -113,7 +113,7 @@ class Stats(Resource):
     def post(self):
         args = parser.parse_args()
 
-        console = subprocess.check_output("python3 main.py stats --playerid={0}".format(args["playerid"]), shell=True)
+        console = subprocess.check_output("python main.py stats --playerid={0}".format(args["playerid"]), shell=True)
 
         re_console = re.findall(r'INIT>>>>>\\nb(.*)\\n<<<<<END', str(console))[0]
 
@@ -130,7 +130,7 @@ class Formation(Resource):
     def post(self):
         args = parser.parse_args()
 
-        console = subprocess.check_output("python3 main.py formation --team={0} --defs={1} --mid={2} --att={3}".format(
+        console = subprocess.check_output("python main.py formation --team={0} --defs={1} --mid={2} --att={3}".format(
             args["team"],
             args["defs"],
             args["mid"],
