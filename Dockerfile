@@ -3,8 +3,8 @@ FROM continuumio/miniconda3
 # For Slackbot Dockerfile
 
 
-ENTRYPOINT []
-CMD [ "/bin/bash" ]
+# ENTRYPOINT []
+# CMD [ "/bin/bash" ]
 
 # RUN conda config --add channels http://conda.anaconda.org/gurobi
 # RUN conda install gurobi
