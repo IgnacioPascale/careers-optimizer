@@ -10,4 +10,4 @@ RUN conda install gurobipy
 RUN conda install -y pandas numpy matplotlib 
 RUN pip install unidecode subprocess flask flask_restful flask_cors argparse Pillow requests
 
-["python api.py"]
+ENTRYPOINT ["python api.py"]
