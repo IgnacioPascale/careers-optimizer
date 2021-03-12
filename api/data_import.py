@@ -6,9 +6,7 @@ def elements():
 
     """
     return: df, ids, roles, player_role
-    
     """
-
     # Read data
     df = pd.read_csv("data/data_clean.csv", index_col = 0)
 

@@ -6,6 +6,24 @@
     >
       <v-flex>
         <!-- IMPORTANT PART! -->
+
+<h1><p> Fifa Career Mode Optimizer </p></h1>
+<p> Stressed about a new career challenge ahead? Limited financial capabilities in your "Road To Glory" adventure? <b>We're here to help.</b></p>
+
+<img src="@/assets/transfer.jpeg">
+
+<p> <b>Careers Optimizer</b> uses linear and integer programming to optimize your team build up for your next Fifa Careers Adventure.</p>
+<p> You can choose from two options: </p>
+
+<ul>
+  <li>Optimize Overall: Set your current financial capabilities, choose your optimal formation and a maximum age per player. This tool will try to find the best overall team.</li>
+  <li>Optimize Potential: Similar to the previous one, but with the added component of setting a maximum <b>current</b> overall. This model will optimize the future potential of players. </li>
+  <p></p>
+</ul>
+
+<p> You can choose an infinite number of players, starting from 1. The team formation visualization will only show up when you choose 11 (with a normal formation).</p>
+<p> <b>Optimize below! </b> </p>
+
 <form>
           <v-text-field
             v-model="budget"
@@ -88,6 +106,7 @@
 <script>
   import axios from 'axios'
   //import qs from 'qs'
+
 
 export default {
     name: 'HelloWorld',

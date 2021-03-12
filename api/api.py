@@ -20,7 +20,6 @@ parser = reqparse.RequestParser()
 # First model
 parser.add_argument("budget")
 parser.add_argument("budget_wage")
-#parser.add_argument("players")
 parser.add_argument("gk")
 parser.add_argument("defs")
 parser.add_argument("mid")
@@ -45,7 +44,6 @@ class Overall(Resource):
         ret =  subprocess.check_output("python3 main.py overall --budget {0} --budget_wage {1}  --gk {2} --defs {3} --mid {4} --att {5} --max_age {6}".format(
             args["budget"],
             args["budget_wage"],
-            #args["players"],
             args["gk"],
             args["defs"],
             args["mid"],
@@ -53,18 +51,17 @@ class Overall(Resource):
             args["max_age"]
         ), shell=True)
 
-        #result = re.search("INIT>>>>>(.*)<<<<<END", ret).group(0)
+        # Players ID
         result =  re.findall(r'INIT>>>>>\\n(.*)\\n<<<<<END',str(ret))[0]
         
-        # Solution
+        # Model Solution
         solution = re.findall(r'SOL>>>>>>(.*)<<<<<<SOL', str(ret))[0]
 
         res = list(result.split(","))
-
         players = len(res)
 
         final_list = []
-        for i in res[:int(players)-1]:#res[:10]:
+        for i in res[:int(players)-1]:
             final_list.append(str(i)[1:])
 
         final_list.append(str(res[-1])[1:].rstrip(']'))
@@ -84,7 +81,6 @@ class Potential(Resource):
         ret =  subprocess.check_output("python3 main.py potential --budget {0} --budget_wage {1}  --gk {2} --defs {3} --mid {4} --att {5} --max_age {6} --max_overall {7}".format(
             args["budget"],
             args["budget_wage"],
-           # args["players"],
             args["gk"],
             args["defs"],
             args["mid"],
@@ -93,15 +89,14 @@ class Potential(Resource):
             args["max_overall"]
         ), shell=True)
 
-        #result = re.search("INIT>>>>>(.*)<<<<<END", ret).group(0)
+        # Players ID
         result =  re.findall(r'INIT>>>>>\\n(.*)\\n<<<<<END',str(ret))[0]
-
-
+        
+        # Model solution
         solution = re.findall(r'SOL>>>>>>(.*)<<<<<<SOL', str(ret))[0]
 
         res = list(result.split(","))
         players = len(res)
-
 
         final_list = []
         for i in res[:int(players)-1]:#res[:10]:
@@ -151,5 +146,5 @@ class Formation(Resource):
 api.add_resource(Formation, "/formation")
 
 if __name__ == "__main__":
-    port = int(os.environ.get('PORT', 5000))
-    app.run(debug=True, host = '0.0.0.0', port=port)
+    # port = int(os.environ.get('PORT', 5000))
+    app.run(debug=True) # host = '0.0.0.0'
