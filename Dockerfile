@@ -13,5 +13,4 @@ CMD [ "/bin/bash" ]
 # RUN pip install unidecode
 # RUN pip install flask
 
-COPY . /api
-CMD python /api/api.py
+ENTRYPOINT [ "./api.py" ]
