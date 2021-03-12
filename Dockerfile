@@ -13,6 +13,6 @@ CMD [ "/bin/bash" ]
 # RUN pip install unidecode
 # RUN pip install flask
 
-COPY ./api
+COPY . /api
 RUN make /api
 CMD python /api/api.py
