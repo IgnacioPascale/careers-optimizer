@@ -175,7 +175,7 @@ def createPotentialModel(budget, budget_wage = 500000, players = 11, gk = 1, def
         
     
     # Max Overall Constraint
-    max_overall = m.addConstr( is_player[i]*df.loc[i, "Overall"] <= max_overall)
+    max_overall = m.addConstr( is_player[i]*df.loc[i, "Overall"] <= max_overall for i in ids)
         
     
     ## Set Objective ##
