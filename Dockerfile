@@ -13,4 +13,8 @@ FROM continuumio/miniconda3
 # RUN pip install unidecode
 # RUN pip install flask
 
-ENTRYPOINT [ "./api.py" ]
+COPY . /api
+WORKDIR /api
+
+ENTRYPOINT [ "python3" ]
+CMD ["api.py"]
