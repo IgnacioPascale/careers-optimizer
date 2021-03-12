@@ -24,7 +24,7 @@ def printSolutionOverall(model, players, is_player):
     if model.status == GRB.OPTIMAL:
         print('\nIndiviual Avg Overall: %f' % (model.objVal/players))
         print('\nPlayers:')
-        print('\nId | Name | Role | Overall')
+        print('\nName | Role | Overall')
 
         total_budget = 0
         total_budget_wage = 0
@@ -32,14 +32,13 @@ def printSolutionOverall(model, players, is_player):
         for i in ids:
             if is_player[i].x == 1:
                    #unaccented_string = unidecode.unidecode(ret)
-                print(i,
-                      unidecode.unidecode(df.loc[i, "Name"]),
+                print(unidecode.unidecode(df.loc[i, "Name"]),
                       df.loc[i, "Role"], 
                       df.loc[i, "Overall"])
                 total_budget += df.loc[i, "Value"]
                 total_budget_wage += df.loc[i, "Wage"]
-        print("Total Transfer Budget Spent: $" + str(total_budget))
-        print("Total Weekly Wage Budget Per Season: $" + str(total_budget_wage))
+        print("\nTotal Transfer Budget Spent: $" + str(total_budget))
+        print("\nTotal Weekly Wage Budget Per Season: $" + str(total_budget_wage))
                 
     else:
         print('No solution')
@@ -53,7 +52,7 @@ def printSolutionPotential(model, players, is_player):
     if model.status == GRB.OPTIMAL:
         print('\nIndiviual Avg Potential: %f' % (model.objVal/players))
         print('\nPlayers:')
-        print('\nId | Name | Role | Overall | Potential')
+        print('\nName | Role | Overall | Potential')
 
         total_budget = 0
         total_budget_wage = 0
@@ -62,15 +61,14 @@ def printSolutionPotential(model, players, is_player):
 
         for i in ids:
             if is_player[i].x == 1:
-                print(i,
-                unidecode.unidecode(df.loc[i, "Name"]),
+                print(unidecode.unidecode(df.loc[i, "Name"]),
                 df.loc[i, "Role"], 
                 df.loc[i, "Overall"],
                 df.loc[i, "Potential"])
                 total_budget += df.loc[i, "Value"]
                 total_budget_wage += df.loc[i, "Wage"]
-        print("Total Transfer Budget Spent: $" + str(total_budget))
-        print("Total Weekly Wage Budget Per Season: $" + str(total_budget_wage))
+        print("\nTotal Transfer Budget Spent: $" + str(total_budget))
+        print("\nTotal Weekly Wage Budget Per Season: $" + str(total_budget_wage))
 
     else:
         print('No solution')
