@@ -8,9 +8,6 @@ json-merge-patch==0.2
 json5==0.9.5
 jsonfield==3.1.0
 jsonschema==3.2.0
-matplotlib==3.1.0
-numpy==1.16.4
-pandas==0.24.2
 parso==0.5.1
 Pillow==8.0.1
 pipenv==2020.11.15

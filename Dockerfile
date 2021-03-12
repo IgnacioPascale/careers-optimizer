@@ -9,6 +9,6 @@ CMD [ "/bin/bash" ]
 RUN conda config --add channels http://conda.anaconda.org/gurobi
 RUN conda install gurobi
 RUN conda install -y pandas numpy matplotlib 
-RUN pip install unidecode subprocess flask flask_restful flask_cors argparse Pillow requests
+RUN pip install -r requirements.txt
 
 ENTRYPOINT ["python api.py"]
