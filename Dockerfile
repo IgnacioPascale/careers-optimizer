@@ -3,7 +3,6 @@ FROM continuumio/miniconda3
 # For Slackbot Dockerfile
 
 ENTRYPOINT []
-CMD [ "/bin/bash" ]
 
 # Remove (large file sizes) MKL optimizations.
 RUN conda config --add channels http://conda.anaconda.org/gurobi
