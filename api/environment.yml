@@ -2,8 +2,15 @@
 # $ conda create --name <env> --file <this file>
 # platform: osx-64
 # conda config --add channels http://conda.anaconda.org/gurobi
-gurobi
-pandas
-numpy
-matplotlib
 
+name: condaenv2
+channels:
+- anaconda
+- conda-forge
+- defaults
+dependencies:
+- gurobi
+- pandas
+- numpy
+- matplotlib
+- pip
